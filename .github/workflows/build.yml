@@ -6,6 +6,10 @@ on:
       - main
       - staging
 
+env:
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+  SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+
 jobs:
   deployment:
     runs-on: ubuntu-latest
