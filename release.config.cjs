@@ -24,7 +24,7 @@ module.exports = {
             ],
             message: "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
         }],
-        "@semantic-release/gitlab",
+        "@semantic-release/github",
         [
             "@semantic-release/exec",
             {
