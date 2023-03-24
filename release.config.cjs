@@ -1,9 +1,6 @@
 const PROJECT_NAME = "Test Service";
 
 const { SLACK_WEBHOOK } = process.env;
-console.log("Hook:", `${SLACK_WEBHOOK}`, {
-    https: /^https/.test(SLACK_WEBHOOK)
-});
 
 module.exports = {
     branches: [
