@@ -1,6 +1,7 @@
 const PROJECT_NAME = "Test Service";
 
 const { SLACK_WEBHOOK } = process.env;
+console.log("Hook length:", `${SLACK_WEBHOOK}`.length);
 
 module.exports = {
     branches: [
@@ -24,7 +25,6 @@ module.exports = {
             ],
             message: "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
         }],
-        "@semantic-release/github",
         [
             "@semantic-release/exec",
             {
