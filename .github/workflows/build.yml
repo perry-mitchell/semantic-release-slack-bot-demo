@@ -1,0 +1,20 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+      - staging
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    environment: main
+    steps:
+      - uses: actions/checkout@v3
+      - name: NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+      - name: deploy
+        run: npm run release
